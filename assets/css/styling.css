@@ -257,7 +257,6 @@ a {
 
 a:hover, a:focus {
   color: #91d7e3 !important;
-  font-weight: bold;
 }
 
 a small {

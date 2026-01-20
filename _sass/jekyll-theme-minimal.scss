@@ -1,5 +1,5 @@
-@import "fonts";
-@import "jekyll-pygments-macchiato";
+@use "fonts";
+@use "jekyll-pygments-macchiato";
 
 @media screen and (min-width: 900px) {
   div.wrapper {
@@ -71,7 +71,6 @@ a {
 
 a:hover, a:focus {
   color: #91d7e3 !important;
-  font-weight: bold;
 }
 
 a small {
