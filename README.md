@@ -4,6 +4,8 @@
 
 _Minimal is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/minimal), or even [use it today](#usage)._
 
+Themed with [Catppuccin](https://catppuccin.com/) Macchiato.
+
 ![Thumbnail of Minimal](thumbnail.png)
 
 ## Usage
@@ -116,3 +118,9 @@ If you'd like to preview the theme locally (for example, in the process of propo
 ### Running tests
 
 The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
+
+### For devs
+You would probably want to set up githooks
+```bash
+git config core.hooksPath .githooks
+```

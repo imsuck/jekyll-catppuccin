@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT" || exit 0
+
+echo "[commit-msg hook]: Running sass"
+
+if command -v sass >/dev/null 2>&1; then
+  if sass --no-source-map _sass/minimal.scss assets/css/styling.css; then
+    git add assets/css/styling.css
+    echo "[commit-msg hook]: sass build succeeded"
+  else
+    echo "[commit-msg hook]: WARNING: Sass failed — commit will proceed without updated CSS"
+  fi
+else
+  echo "[commit-msg hook]: WARNING: Sass not found — skipping CSS build"
+fi
+sleep 1
